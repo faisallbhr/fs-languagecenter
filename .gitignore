@@ -1,0 +1,13 @@
+# Frontend (Vite)
+frontend/dist/
+frontend/node_modules/
+frontend/*.log*
+
+backend/gateway/node_modules/
+backend/gateway/*.log*
+
+backend/user-service/node_modules/
+backend/user-service/*.log*
+
+backend/leave-service/node_modules/
+backend/leave-service/*.log*

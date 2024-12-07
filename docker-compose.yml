@@ -1,0 +1,47 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - gateway
+
+  gateway:
+    build:
+      context: ./backend/gateway
+    ports:
+      - "5000:5000"
+    depends_on:
+      - user-service
+      - leave-service
+    env_file:
+      - ./backend/gateway/.env.production
+
+  user-service:
+    build:
+      context: ./backend/user-service
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./backend/user-service/.env.production
+
+  leave-service:
+    build:
+      context: ./backend/leave-service
+    ports:
+      - "5002:5002"
+    env_file:
+      - ./backend/leave-service/.env.production
+
+volumes:
+  mongo-data:
