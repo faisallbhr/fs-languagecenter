@@ -9,6 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Toaster } from "@/components/ui/toaster";
 import useLeaveHooks from "@/hooks/useLeaveHooks";
 import { clearAuthData, getUserInfo } from "@/lib/auth";
 import { LeaveParams } from "@/types/request/leave";
@@ -33,6 +34,7 @@ export default function Dashboard() {
   };
   return (
     <div className="max-w-7xl mx-auto p-4">
+      <Toaster />
       <h1 className="text-center font-bold text-3xl">Data Pengajuan Cuti</h1>
       <div className="flex justify-end gap-4 mt-8">
         <Button
