@@ -23,9 +23,9 @@ const LeaveTable = ({
         <thead>
           <tr className="bg-zinc-900">
             <th className="py-2 whitespace-nowrap">No.</th>
-            <th className="py-2 whitespace-nowrap">Nama</th>
-            <th className="py-2 whitespace-nowrap">Tanggal Cuti</th>
-            <th className="py-2 whitespace-nowrap">Alasan</th>
+            <th className="py-2 whitespace-nowrap">Name</th>
+            <th className="py-2 whitespace-nowrap">Date of Leave</th>
+            <th className="py-2 whitespace-nowrap">Reason</th>
             <th className="py-2 whitespace-nowrap">Status</th>
           </tr>
         </thead>

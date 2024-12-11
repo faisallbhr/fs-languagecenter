@@ -35,7 +35,7 @@ export default function Dashboard() {
   return (
     <div className="max-w-7xl mx-auto p-4">
       <Toaster />
-      <h1 className="text-center font-bold text-3xl">Data Pengajuan Cuti</h1>
+      <h1 className="text-center font-bold text-3xl">Leave Request Data</h1>
       <div className="flex justify-end gap-4 mt-8">
         <Button
           variant={"secondary"}
@@ -46,13 +46,13 @@ export default function Dashboard() {
         {role === "employee" && (
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
-              <Button className="rounded">Buat pengajuan</Button>
+              <Button className="rounded">Create Leave Request</Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>Buat pengajuan cuti</DialogTitle>
+                <DialogTitle>Create leave request</DialogTitle>
                 <DialogDescription>
-                  Isi formulir di bawah ini untuk pengajuan cuti.
+                  Fill out the form below to apply for leave.
                 </DialogDescription>
               </DialogHeader>
               <LeaveForm

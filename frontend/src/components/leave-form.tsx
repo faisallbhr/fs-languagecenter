@@ -51,11 +51,11 @@ const LeaveForm = ({
           name="id"
           render={() => (
             <FormItem>
-              <FormLabel>Nama</FormLabel>
+              <FormLabel>Name</FormLabel>
               <FormControl>
                 <Input
                   type="text"
-                  placeholder="Nama"
+                  placeholder="Name"
                   disabled
                   value={userName}
                 />
@@ -69,14 +69,9 @@ const LeaveForm = ({
           name="startDate"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Tanggal Mulai</FormLabel>
+              <FormLabel>Start Date</FormLabel>
               <FormControl>
-                <Input
-                  type="date"
-                  className="rounded"
-                  placeholder="Tanggal mulai"
-                  {...field}
-                />
+                <Input type="date" className="rounded" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -87,14 +82,9 @@ const LeaveForm = ({
           name="endDate"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Tanggal Selesai</FormLabel>
+              <FormLabel>End Date</FormLabel>
               <FormControl>
-                <Input
-                  type="date"
-                  className="rounded"
-                  placeholder="Tanggal selesai"
-                  {...field}
-                />
+                <Input type="date" className="rounded" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -105,12 +95,12 @@ const LeaveForm = ({
           name="reason"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Alasan</FormLabel>
+              <FormLabel>Reason</FormLabel>
               <FormControl>
                 <Input
                   type="text"
                   className="rounded"
-                  placeholder="Alasan cuti"
+                  placeholder="Leave reason"
                   {...field}
                 />
               </FormControl>
@@ -119,7 +109,7 @@ const LeaveForm = ({
           )}
         />
         <Button className="w-full rounded" type="submit" disabled={isPending}>
-          Kirim Pengajuan
+          Send Request
         </Button>
       </form>
     </Form>
